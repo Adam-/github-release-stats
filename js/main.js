@@ -179,7 +179,7 @@ function getStats() {
     var user = $("#username").val();
     var repository = $("#repository").val();
 
-    var url = apiRoot + "repos/" + user + "/" + repository + "/releases";
+    var url = apiRoot + "repos/" + user + "/" + repository + "/releases?per_page=100";
     $.getJSON(url, showStats).fail(showStats);
 }
 
